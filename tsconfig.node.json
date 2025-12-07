@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": [
+      "ES2023"
+    ],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    /* Compatibility: use "node" if TS < 5.0; "bundler" is TS 5+ */
+    "moduleResolution": "node",
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    /* Node types to avoid missing globals (process, __dirname, etc.) */
+    "types": [
+      "node"
+    ],
+    /* Interop to reduce import errors between CJS/ESM */
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": [
+    "vite.config.ts"
+  ]
+}
