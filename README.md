@@ -11,78 +11,72 @@ Ce projet est une application web moderne créée pour sensibiliser et célébre
 ```mermaid
 graph TB
     subgraph "Client Layer"
-        A[Navigateur Web]
+        A[Web Browser]
         A1[Desktop]
         A2[Mobile]
-        A3[Tablette]
+        A3[Tablet]
     end
 
-    subgraph "Frontend - React Application"
-        B[React 18.3.1]
-        B --> C[React Router DOM]
-        B --> D[Components UI]
-        B --> E[Pages]
-        
-        D --> D1[shadcn/ui Components]
-        D --> D2[Radix UI]
-        D --> D3[Lucide Icons]
-        
-        E --> E1[Home]
-        E --> E2[About]
-        E --> E3[Events]
-        E --> E4[Resources]
+    subgraph "Frontend Application"
+        B[React 18.3.1 + TypeScript 5.5.3]
+        C[React Router DOM]
+        D[UI Components Layer]
+        E[Pages]
     end
 
-    subgraph "State Management"
-        F[TanStack Query]
-        G[React Hook Form]
-        H[Zod Validation]
+    subgraph "UI Component Libraries"
+        F[shadcn/ui]
+        G[Radix UI]
+        H[Lucide Icons]
     end
 
-    subgraph "Styling Layer"
-        I[Tailwind CSS 3.4.1]
-        J[Framer Motion]
-        K[CSS Modules]
+    subgraph "State & Form Management"
+        I[TanStack Query]
+        J[React Hook Form]
+        K[Zod Validation]
     end
 
-    subgraph "Backend Services"
-        L[Supabase BaaS]
-        L --> M[Authentication]
-        L --> N[PostgreSQL Database]
-        L --> O[Storage]
-        L --> P[Real-time Subscriptions]
+    subgraph "Styling & Animation"
+        L[Tailwind CSS 3.4.1]
+        M[Framer Motion]
+        N[Embla Carousel]
     end
 
-    subgraph "Build Tools"
-        Q[Vite 5.4.2]
-        R[TypeScript 5.5.3]
-        S[ESLint]
-    end
-
-    subgraph "External Services"
-        T[CDN - Static Assets]
-        U[Analytics]
+    subgraph "Build Tools & Configuration"
+        O[Vite 5.4.2]
+        P[ESLint]
+        Q[PostCSS]
     end
 
     A1 --> B
     A2 --> B
     A3 --> B
     
-    B --> F
-    B --> G
-    G --> H
+    B --> C
+    B --> D
+    B --> E
+    
+    D --> F
+    D --> G
+    D --> H
     
     B --> I
     B --> J
+    J --> K
     
-    F --> L
-    
-    Q --> B
-    R --> B
-    
+    B --> L
+    L --> M
     L --> N
     
-    T --> B
+    O --> B
+    P --> B
+    Q --> L
+    
+    style A fill:#e1f5ff
+    style B fill:#ffeb99
+    style D fill:#f0e6ff
+    style L fill:#ffe6cc
+    style O fill:#d4f1d4
 ```
 
 ## Technologies Utilisées
@@ -125,8 +119,8 @@ graph TB
 
 1. Cloner le repository
 ```bash
-git clone <https://github.com/TaniaW777/international-mens-day>
-cd men_day
+git clone https://github.com/TaniaW777/international-mens-day.git
+cd international-mens-day
 ```
 
 2. Installer les dépendances
